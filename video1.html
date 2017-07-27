@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="scripts/underscore-min.js"></script>
+    <script src="scripts/require.js"></script>
+</head>
+
+<body>
+
+    <p><a href="https://www.youtube.com/watch?v=BMUiFMZr7vk">Video link</a></p>
+
+    <p>The reject just works if you use library <a href="http://underscorejs.org/">underscore.js</a></p>
+    <p>Press F-12 in Chrome to see the developer tools and console</p>
+
+</body>
+
+<script>
+    var animals = [{
+        name: 'Monkey',
+        specices: 'mammal'
+    }, {
+        name: 'Seagull',
+        specices: 'bird'
+    }, {
+        name: 'Whale',
+        specices: 'mammal'
+    }, {
+        name: 'Cockroach',
+        specices: 'insect'
+    }]
+
+    /*
+    var mammals = [];
+    for (var i = 0; i < animals.length; i++) {
+        if (animals[i].specices === "mammal") {
+            mammals.push(animals[i]);
+        }
+    }
+    */
+
+    /* Same result as the for but with less line os code and more compreensive
+    var mammals = animals.filter(function(animal) {
+        return animal.specices === "mammal"
+    })
+    */
+    var isMammal = function(animal) {
+        return animal.specices === "mammal"
+    }
+
+    var mammals = animals.filter(isMammal)
+    var otherAnimals = animals.filter(isMammal)
+
+    console.log("We have ", animals.length, " animals");
+    console.log("There is ", mammals.length, " mammals");
+    console.log("And ", otherAnimals.length, " other animals");
+</script>
+
+</html>

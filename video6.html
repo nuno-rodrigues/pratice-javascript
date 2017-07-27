@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="scripts/underscore-min.js"></script>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/lodash.min.js"></script>
+</head>
+
+<body>
+
+    <p><a href="https://www.youtube.com/watch?v=CQqwU2Ixu-U">Video link</a></p>
+
+    <p>I cant use the Curry function in lodash: https://lodash.com/docs#curry</p>
+    <p>Press F-12 in Chrome to see the developer tools and console</p>
+
+</body>
+
+<script>
+    //let dragon = (name, size, element) =>
+    //        name + ' is a ' +
+    //        size + ' dragon that breathes ' +
+    //        element + '!'
+    // console.log(dragon('nuno', 'small', 'fire'))
+
+
+    /*
+    let dragon =
+        name =>
+        size =>
+        element =>
+        name + ' is a ' +
+        size + ' dragon that breathes ' +
+        element + '!'
+
+    let nunoDragon = dragon('nuno')
+    let nunoSize = nunoDragon('small')
+    */
+
+    let dragons = [{
+        name: 'Nuno',
+        element: 'Fire'
+    }, {
+        name: 'Ricardo',
+        element: 'Water'
+    }, {
+        name: 'Correia',
+        element: 'Fire'
+    }, {
+        name: 'Rodrigues',
+        element: 'Wind'
+    }]
+
+    let hasElement = (element, obj) => obj.element === element
+
+    let hasFire = dragons.filter(x => hasElement('Fire', x))
+
+    console.log(hasFire)
+</script>
+
+</html>

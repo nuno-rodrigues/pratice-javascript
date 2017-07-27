@@ -1,0 +1,6 @@
+john doe    washing machine 120 2
+john doe    tv  200 1
+john doe    ps4 300 5
+karen smith washing machine 120 1
+karen smith tv  200 2
+karen smith ps4 300 3

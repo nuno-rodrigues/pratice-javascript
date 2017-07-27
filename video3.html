@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="scripts/underscore-min.js"></script>
+    <script src="scripts/require.js"></script>
+</head>
+
+<body>
+
+    <p><a href="https://www.youtube.com/watch?v=Wl98eZpkp-c">Video link</a></p>
+
+    <p>Press F-12 in Chrome to see the developer tools and console</p>
+
+</body>
+
+<script>
+    var orders = [{
+        amount: 250
+    }, {
+        amount: 500
+    }, {
+        amount: 125
+    }, {
+        amount: 750
+    }, ]
+
+    /*
+    var totalAmount = 0;
+    for (var i = 0; i < orders.length; i++) {
+        totalAmount += orders[i].amount;
+    }   
+    */
+
+    //ecma5
+    /**/
+    var totalAmount = orders.reduce(function(sum, order) {
+        return sum + order.amount
+    }, 0)
+
+
+    //ecma6
+    /*
+    var totalAmount = orders.reduce((sum, order) => sum + order.amount, 0)
+    */
+
+    console.log("Total amount: ", totalAmount);
+</script>
+
+</html>

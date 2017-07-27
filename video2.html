@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="scripts/underscore-min.js"></script>
+    <script src="scripts/require.js"></script>
+</head>
+
+<body>
+
+    <p><a href="https://www.youtube.com/watch?v=bCqtb-Z5YGQ">Video link</a></p>
+
+    <p>Press F-12 in Chrome to see the developer tools and console</p>
+
+</body>
+
+<script>
+    var animals = [{
+        name: 'Monkey',
+        specices: 'mammal'
+    }, {
+        name: 'Seagull',
+        specices: 'bird'
+    }, {
+        name: 'Whale',
+        specices: 'mammal'
+    }, {
+        name: 'Cockroach',
+        specices: 'insect'
+    }]
+
+    /*
+    var names = [];
+    for (var i = 0; i < animals.length; i++) {
+        names.push(animals[i].name);
+    }
+    */
+
+    // Same result as the for but with less line os code and more compreensive
+    /* ecma5
+    var names = animals.map(function(animal) {
+        return animal.name + 'is a ' + animal.specices
+    })
+    */
+
+    //ecma6
+    var names = animals.map((x) => x.name)
+
+
+    /*
+    var isMammal = function(animal) {
+        return animal.specices === "mammal"
+    }
+
+    var mammals = animals.filter(isMammal)
+    var otherAnimals = animals.filter(isMammal)
+    */
+    console.log("Names: ", names);
+</script>
+
+</html>
