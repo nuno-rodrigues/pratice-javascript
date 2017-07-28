@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
 </head>
 
 <body>
@@ -12,17 +13,11 @@
 
 </body>
 
-<script type="text/javascript">
-    import loadImagePromise
-    from './load-image-promised'
+<script src="load-image-promise.js" type="text/javascript">
+    //import loadImagePromise
+    //from './load-image-promised'
 
-    loadImagePromise('img/cat.jpg')
-        .then((img) => {
-            var imgElement =
-                document.createElement("img")
-            imgElement.src = img.src
-            document.body.appendChild(imgElement)
-        })
+    /* */
 </script>
 
 </html>
