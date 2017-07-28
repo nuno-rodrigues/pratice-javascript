@@ -3,6 +3,7 @@
 
 <head>
     <script src="scripts/underscore-min.js"></script>
+    <script src="scripts/babel.min.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -29,12 +30,12 @@ karen smith ps4 300 3
     //old way 
     //var fs = require(['fs'])
 
-    //import fs from 'fs'
+    import fs from 'fs'
 
-    //var output = fs.readFileSync('data.txt')
+    var output = fs.readFileSync('data.txt')
 
-    //console.log("Info in data.txt: ", output)
-    console.log("I cant complete this video :( ")
+    console.log("Info in data.txt: ", output)
+        //console.log("I cant complete this video :( ")
 </script>
 
 </html>

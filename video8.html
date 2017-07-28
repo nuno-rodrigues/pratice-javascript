@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <p><a href="https://www.youtube.com/watch?v=2d7s3spWAzo">Video link</a></p>
+
+    <p>Press F-12 in Chrome to see the developer tools and console</p>
+
+</body>
+
+<script type="text/javascript">
+    import loadImagePromise
+    from './load-image-promised'
+
+    loadImagePromise('img/cat.jpg')
+        .then((img) => {
+            var imgElement =
+                document.createElement("img")
+            imgElement.src = img.src
+            document.body.appendChild(imgElement)
+        })
+</script>
+
+</html>
